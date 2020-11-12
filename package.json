@@ -1,0 +1,17 @@
+{
+  "name": "bcoins-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server",
+    "dev": "live-server --no-browser",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
