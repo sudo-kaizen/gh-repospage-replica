@@ -1,0 +1,105 @@
+:root {
+  --header-bg-color: #24292e;
+  --color-text-link: #0366d6;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header {
+  background-color: var(--header-bg-color);
+}
+
+header {
+  padding: 16px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  max-height: 64px;
+}
+
+header button {
+  background-color: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.github-icon {
+  max-height: 32px;
+}
+
+.dropdown-header {
+  background-color: var(--header-bg-color);
+  padding: 0px 16px;
+}
+
+.header-search-form{
+  background-color: var(--header-bg-color);
+  padding: 0px 12px;
+  font-size: 14px;
+  border: 1px solid #444d56;
+  min-height: 30px;
+  border-radius: 6px;
+  line-height: 20px;
+  box-shadow: none;
+  width: 100%;
+  color: #fff;
+  outline: none;
+}
+
+.header-search-form::placeholder {
+  color: hsla(0,0%,100%,.75);
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+}
+
+.header-search-form:focus{
+  background-color: #444d56;
+  border: 1px solid #0366d6;
+}
+
+footer {
+  margin: 40px 0px 0px;
+  padding: 52px 16px;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  font-size: 12px;
+}
+
+footer ul li:first-child{
+color: #24292e;
+margin-right: 16px;
+}
+
+footer ul li a{
+  margin-right: 16px;
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+footer ul li a:hover{
+  text-decoration: underline;
+}
