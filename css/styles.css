@@ -3,7 +3,9 @@
   --color-text-link: #0366d6;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -41,7 +43,7 @@ header button {
 }
 
 header button:active {
-outline: none;
+  outline: none;
 }
 
 .github-icon {
@@ -55,8 +57,8 @@ outline: none;
   flex-flow: column;
 }
 
-.dropdown-header .header-search-form{
-  padding-bottom: 16px ;
+.dropdown-header .header-search-form {
+  padding-bottom: 16px;
 }
 
 .dropdown-header .header-search-form .header-search-input {
@@ -84,10 +86,12 @@ outline: none;
   font-weight: 300;
   display: block;
 }
-.header-link-wrapper{
+
+.header-link-wrapper {
   padding: 8px 0px;
 }
-.header-link{
+
+.header-link {
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -96,13 +100,83 @@ outline: none;
   line-height: 1.5;
   padding: 8px 0px;
 }
+
 .header-link * {
   display: inline-block;
   vertical-align: middle;
 }
-.header-link:hover{
-  color:  hsla(0, 0%, 100%, 0.75);
+
+.header-link:hover {
+  color: hsla(0, 0%, 100%, 0.75);
   text-decoration: none;
+}
+
+.profile {
+  padding: 4px 16px 16px;
+}
+
+.profile__basic {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: 64px;
+  margin-bottom: 20px;
+}
+
+.profile .img-link {
+  width: 16%;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.profile .img-link img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile .names {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-left: 8px;
+}
+
+.profile .names .user-full-name {
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.profile .names .user-nickname {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.profile__status .status-emoji{
+  margin-right: 8px;
+  max-width:18px;
+}
+.profile .profile__status{
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 12px;
+  display: flex;
+  color: #24252e;
+  flex-flow: row nowrap;
+  justify-content : flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.profile__status:hover{
+  color: var(--color-text-link);
+  cursor: pointer;
+}
+
+.profile .status-bio{
+  color: #24292e;
 }
 
 footer {

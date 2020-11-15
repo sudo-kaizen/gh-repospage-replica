@@ -12,7 +12,7 @@
         <button>
           <svg
             height="24"
-            class="octicon octicon-three-bars"
+            class=""
             viewBox="0 0 16 16"
             version="1.1"
             width="24"
@@ -29,7 +29,7 @@
       <div class="github-icon svg-icon">
         <button>
           <svg
-            class="octicon octicon-mark-github v-align-middle"
+            class=""
             height="32"
             viewBox="0 0 16 16"
             version="1.1"
@@ -61,7 +61,7 @@
             "
           ></span>
           <svg
-            class="octicon octicon-bell"
+            class=""
             viewBox="0 0 16 16"
             version="1.1"
             width="16"
@@ -83,72 +83,67 @@
     </header>
 
     <div class="dropdown-header">
+      <form class="header-search-form">
+        <input class="header-search-input" type="text" placeholder="Search" />
+      </form>
 
-          <form class="header-search-form">
-            <input
-              class="header-search-input"
-              type="text"
-              placeholder="Search"
-            />
-          </form>
+      <a href="#" class="header-link">Dashboard</a>
 
-          <a href="#" class="header-link">Dashboard</a>
+      <a href="#" class="header-link">Pull requests</a>
 
+      <a href="#" class="header-link">Issues</a>
 
-          <a href="#" class="header-link">Pull requests</a>
+      <a href="#" class="header-link">Marketplace</a>
 
+      <a href="#" class="header-link">Explore</a>
 
-          <a href="#" class="header-link">Issues</a>
-
-
-          <a href="#" class="header-link">Marketplace</a>
-
-
-          <a href="#" class="header-link">Explore</a>
-
-
-          <a href="#" class="header-link">
-            <img
-              src="/img/profile-img.png"
-              alt="profile"
-              style="border-radius: 50%; height: 20px; width: 20px;"
-            /> sudo-kaizen
-          </a>
-
-
-          <a href="#" class="header-link" style="padding-left: 2px;">
-            <svg
-              class="octicon octicon-sign-out v-align-middle"
-              fill="#fff"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="16"
-              height="16"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"
-              ></path>
-            </svg>
-            <span>Sign out</span>
-          </a>
-
-
-    </div>
-
-    <div class="profile" style="padding: 4px 16px;">
-      <a href="#">
+      <a href="#" class="header-link">
         <img
-          style="border-radius: 50%; width: 20%;"
           src="/img/profile-img.png"
           alt="profile"
+          style="border-radius: 50%; height: 20px; width: 20px;"
         />
+        sudo-kaizen
       </a>
-      <div>
-        <h1 class="user-full-name">Orim Dominic</h1>
-        <h2 class="user-username">sudo-kaizen</h2>
+
+      <a href="#" class="header-link" style="padding-left: 2px;">
+        <svg
+          class="octicon octicon-sign-out v-align-middle"
+          fill="#fff"
+          viewBox="0 0 16 16"
+          version="1.1"
+          width="16"
+          height="16"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 2.75C2 1.784 2.784 1 3.75 1h2.5a.75.75 0 010 1.5h-2.5a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h2.5a.75.75 0 010 1.5h-2.5A1.75 1.75 0 012 13.25V2.75zm10.44 4.5H6.75a.75.75 0 000 1.5h5.69l-1.97 1.97a.75.75 0 101.06 1.06l3.25-3.25a.75.75 0 000-1.06l-3.25-3.25a.75.75 0 10-1.06 1.06l1.97 1.97z"
+          ></path>
+        </svg>
+        <span>Sign out</span>
+      </a>
+    </div>
+
+    <div class="profile">
+      <div class="profile__basic">
+        <a href="#" class="img-link">
+          <img class="img" src="/img/profile-img.png" alt="profile" />
+        </a>
+        <h1 class="names">
+          <span class="user-full-name">Orim Dominic Adah</span>
+          <span class="user-nickname">sudo-kaizen</span>
+        </h1>
       </div>
+      <div class="profile__status">
+        <img
+          src="/img/octocat.png"
+          alt="status emoji"
+          class="status-emoji"
+        />
+        <span class="status-text">Building self and building stuff</span>
+      </div>
+      <div class="status-bio">Not PRO 🤓</div>
     </div>
 
     <div class="tabs">
