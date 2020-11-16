@@ -8,10 +8,8 @@
     "dev": "live-server --no-browser",
     "format": "prettier --write ."
   },
-  "dependencies": {
-    "live-server": "^1.2.1"
-  },
   "devDependencies": {
+    "live-server": "^1.2.1",
     "prettier": "^2.0.5"
   }
 }
