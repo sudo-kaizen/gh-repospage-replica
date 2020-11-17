@@ -237,7 +237,7 @@ header button {
   color: #24292e;
 }
 
-.tabs-wrapper{
+.tabs-wrapper {
   background-color: #fff;
   overflow-x: auto;
   overflow-y: hidden;
@@ -276,6 +276,17 @@ header button {
   outline-offset: -1px;
   transition-timing-function: ease-out;
   transition-duration: 0.12s;
+}
+
+.tabs__link svg {
+  fill: #24292e;
+  vertical-align: text-bottom;
+  margin-right: 4px;
+  overflow: hidden;
+}
+
+.tabs__link:not(.selected) svg {
+  fill: #959da5;
 }
 
 .tabs__link.selected {
@@ -537,4 +548,10 @@ footer ul li a:hover {
 .clearfix:before {
   display: table;
   content: "";
+}
+
+@media (max-width: 543px) {
+  .hide-sm {
+    display: none;
+  }
 }
