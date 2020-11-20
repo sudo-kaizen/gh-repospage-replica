@@ -16,6 +16,11 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
+main.main{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -47,7 +52,7 @@ header button {
 }
 .header-svg-icon:hover,
 .plus-svg-icon:hover,
-.dropdown-caret:hover .svg-sign-out:hover {
+.dropdown-caret:hover, .svg-sign-out:hover {
   fill: hsla(0, 0%, 100%, 0.7);
   border-color: hsla(0, 0%, 100%, 0.7);
 }
@@ -518,6 +523,7 @@ header button {
   word-break: break-all;
   font-weight: 600;
   font-size: 20px;
+  line-height: 1.5;
   text-decoration: none;
   color: #0366d6;
 }
@@ -777,7 +783,6 @@ footer ul li a:hover {
 
 .repos__list {
   padding: 0px 24px 0px 16px;
-  color: #586069;
 }
 
 
@@ -817,4 +822,25 @@ footer ul li a:hover {
     padding: 0px 32px 0px 0px;
 }
 
+.search-repos-wrapper {
+    padding: 16px 16px 16px 24px;
 }
+  .profile__basic .avatar-wrapper {
+    max-width: 280px;
+  }
+
+  .profile__basic{
+    padding: 0px 8px;
+  }
+
+.repos__list {
+    padding: 0px 24px;
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+.repos__list {
+    padding-right: 32px;
+}
+  }
