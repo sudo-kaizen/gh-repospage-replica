@@ -847,4 +847,14 @@ footer ul li a:hover {
   margin-right: auto;
   margin-left: auto;
   max-width: 1280px;
-  }}
+  }
+.tabs__link:first-child {
+    margin-left: 0px;
+}
+  .tabs-wrapper.hide-md{
+    padding: 0;
+    max-width: 1248px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
