@@ -291,6 +291,16 @@
             <a href="#" class="img-link">
               <img width="260" src="./img/profile-img.png" class="avatar" />
             </a>
+            <div class="hide-md">
+              <div class="avatar-emoji-items">
+                <div class="img-emoji-wrapper">
+                  <img src="/img/octocat.png" class="img-emoji" />
+                </div>
+                <span class="text-emoji">
+                  Building self and building stuff</span
+                >
+              </div>
+            </div>
           </div>
           <div class="names-wrapper">
             <h1 class="names">
@@ -707,20 +717,22 @@
             .classList.remove("d-none");
           document.querySelector(".overlay").classList.remove("d-none");
         });
- document
-            .querySelector(".dropdown-menu.new-items").addEventListener("click", (ev)=> {
+      document
+        .querySelector(".dropdown-menu.new-items")
+        .addEventListener("click", (ev) => {
           document
             .querySelector(".dropdown-menu.new-items")
             .classList.add("d-none");
           document.querySelector(".overlay").classList.add("d-none");
-            })
- document
-            .querySelector(".dropdown-menu.profile").addEventListener("click", (ev)=> {
+        });
+      document
+        .querySelector(".dropdown-menu.profile")
+        .addEventListener("click", (ev) => {
           document
             .querySelector(".dropdown-menu.profile")
             .classList.add("d-none");
           document.querySelector(".overlay").classList.add("d-none");
-            })
+        });
     </script>
   </body>
 </html>
