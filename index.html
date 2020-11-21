@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
+    <div class="overlay d-none"></div>
     <header>
       <a class="d-md-none">
         <button id="btnHamburger">
@@ -77,7 +78,9 @@
         </div>
 
         <nav class="header-search-links__links">
-          <a class="link" href="#">Pull<span class="hide-lg "> request</span>s</a>
+          <a class="link" href="#"
+            >Pull<span class="hide-lg"> request</span>s</a
+          >
           <a class="link" href="#">Issues</a>
           <a class="link" href="#">Marketplace</a>
           <a class="link" href="#">Explore</a>
@@ -120,6 +123,15 @@
           </svg>
           <span class="dropdown-caret"> </span>
         </button>
+        <div class="dropdown-menu new-items d-none">
+          <ul>
+            <li><a href="#" class="dropdown-item">New repository</a></li>
+            <li><a href="#" class="dropdown-item">Import repository</a></li>
+            <li><a href="#" class="dropdown-item">New gist</a></li>
+            <li><a href="#" class="dropdown-item">New organisation</a></li>
+            <li><a href="#" class="dropdown-item">New project</a></li>
+          </ul>
+        </div>
         <button class="header-profile-icon hide-md">
           <img
             class="header-profile-icon__img"
@@ -129,6 +141,36 @@
           />
           <span class="dropdown-caret"></span>
         </button>
+        <div class="dropdown-menu profile d-none">
+          <div>
+            <a class="signed-in-as" href="#">
+              Signed in as <br />
+              <strong>sudo-kaizen</strong></a
+            >
+          </div>
+          <div class="dropdown-divider"></div>
+          <div class="emoji-status-wrapper">
+            <div class="emoji-status">
+              Building self and building stuff
+            </div>
+          </div>
+          <div class="dropdown-divider"></div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Your profile</a></li>
+            <li><a class="dropdown-item" href="#">Your repositories</a></li>
+            <li><a class="dropdown-item" href="#">Your organisations</a></li>
+            <li><a class="dropdown-item" href="#">Your projects</a></li>
+            <li><a class="dropdown-item" href="#">Your stars</a></li>
+            <li><a class="dropdown-item" href="#">Your gists</a></li>
+          </ul>
+          <div class="dropdown-divider"></div>
+          <ul>
+            <li><a class="dropdown-item" href="#">Feature preview</a></li>
+            <li><a class="dropdown-item" href="#">Help</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -149,13 +191,8 @@
 
       <a href="#" class="header-link">Settings</a>
 
-
       <a href="#" class="header-link">
-        <img
-          src="/img/profile-img.png"
-          alt="profile"
-          style="border-radius: 50%; height: 20px; width: 20px;"
-        />
+        <img src="/img/profile-img.png" alt="profile" class="profile-img" />
         sudo-kaizen
       </a>
 
@@ -211,7 +248,7 @@
             ></path>
           </svg>
           Repositories
-          <span class="repo-counter" style="display: inline-block;">45</span></a
+          <span class="repo-counter">45</span></a
         >
         <a class="tabs__link projects" href="#">
           <svg
@@ -636,10 +673,39 @@
       </ul>
     </footer>
     <script>
+      // show dropdown on w<767px
       document
         .getElementById("btnHamburger")
         .addEventListener("click", (ev) => {
           document.querySelector(".dropdown-header").classList.toggle("d-none");
+        });
+      // hide dropdown menus on clicking outside dropdown menus
+      document.querySelector(".overlay").addEventListener("click", (ev) => {
+        document
+          .querySelector(".dropdown-menu.profile")
+          .classList.add("d-none");
+        document
+          .querySelector(".dropdown-menu.new-items")
+          .classList.add("d-none");
+        document.querySelector(".overlay").classList.add("d-none");
+      });
+      //
+      document
+        .querySelector(".new-items-svg-wrapper")
+        .addEventListener("click", (ev) => {
+          document
+            .querySelector(".dropdown-menu.new-items")
+            .classList.remove("d-none");
+          document.querySelector(".overlay").classList.remove("d-none");
+        });
+      //
+      document
+        .querySelector(".header-profile-icon")
+        .addEventListener("click", (ev) => {
+          document
+            .querySelector(".dropdown-menu.profile")
+            .classList.remove("d-none");
+          document.querySelector(".overlay").classList.remove("d-none");
         });
     </script>
   </body>
