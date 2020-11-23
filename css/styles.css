@@ -862,35 +862,6 @@ cursor: pointer;
   margin-right: 4px;
 }
 
-footer {
-  margin: 40px 0px 0px;
-  padding: 52px 16px;
-}
-
-footer ul {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  height: 54px;
-  font-size: 12px;
-}
-
-footer ul li:first-child {
-  color: #24292e;
-  margin-right: 16px;
-}
-
-footer ul li a {
-  margin-right: 16px;
-  color: var(--color-text-link);
-  text-decoration: none;
-}
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
 .d-none {
   display: none;
 }
