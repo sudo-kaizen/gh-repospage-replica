@@ -104,12 +104,13 @@ const gqlQuery = `{
 `;
 
 const githubGqlUrl = "https://api.github.com/graphql";
-
+const githubToken = "0682ba57d502272afd89f82c87c8122908bf11e4"
 fetch(githubGqlUrl, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `bearer  a1cc775cda82f9e350974ceaf7fe81a4975458d5`,
+    Authorization: `bearer ${githubToken}
+    `,
   },
   body: JSON.stringify({ query: `${gqlQuery}` }),
 })
