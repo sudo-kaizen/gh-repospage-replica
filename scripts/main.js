@@ -118,6 +118,7 @@ fetch(githubGqlUrl, {
   .then(({data}) =>populateUi(data))
   .catch((err) => {
     console.error(err);
+    getElem(".repo-filter-message").innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`
   });
 
 function populateUi({ user }) {
