@@ -220,13 +220,13 @@ header button {
   color: #24292e;
 }
 
-.dropdown-menu.profile .emoji-status-wrapper {
+.dropdown-menu.profile .emoji-wrapper {
   padding: 0px 16px;
   font-size: 12px;
   color: #24292e;
 }
 
-.dropdown-menu.profile .emoji-status-wrapper .emoji-status {
+.dropdown-menu.profile .emoji-wrapper .emoji-status {
   margin-top: 8px;
   padding: 4px 8px;
   border-radius: 6px;
@@ -234,11 +234,26 @@ header button {
   word-break: break-word;
   line-height: 1.25;
   vertical-align: top;
+
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu.profile .emoji-wrapper .emoji-status-text{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+.dropdown-menu.profile .emoji-wrapper .emoji-status-text:hover {
+color: var(--color-text-link);
+cursor: pointer;
+}
+
+.dropdown-menu.profile .emoji-wrapper .emoji-status-img{
+  max-width: 18px;
+  margin-right: 8px;
+}
 .header-profile-icon {
   color: #fff;
   outline: none;
@@ -667,6 +682,11 @@ header button {
   box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
+.repo-filter-message{
+  padding: 16px;
+  color: #24292e;
+}
+
 .repos__list {
   padding: 0px 16px;
   color: #586069;
@@ -679,6 +699,10 @@ header button {
   justify-content: space-between;
   padding: 24px 0px;
   border-top: 1px solid #e1e4e8;
+}
+
+.repo .repo__details{
+  flex-basis: 75%;
 }
 
 .repo svg {
@@ -848,7 +872,7 @@ footer ul {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 54px;
   font-size: 12px;
 }
@@ -1053,7 +1077,7 @@ footer ul li a:hover {
     padding: 0px 24px;
   }
 
-  .search-repos-wrapper {
+  .search-repos-wrapper, .repo-filter-message {
     padding: 16px 16px 16px 24px;
   }
   .profile__basic .avatar-wrapper {
