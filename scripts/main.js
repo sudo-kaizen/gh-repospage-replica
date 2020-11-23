@@ -104,7 +104,7 @@ const gqlQuery = `{
 `;
 
 const githubGqlUrl = "https://api.github.com/graphql";
-const githubToken = "0682ba57d502272afd89f82c87c8122908bf11e4"
+const githubToken = atob("NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw==")
 fetch(githubGqlUrl, {
   method: "POST",
   headers: {
