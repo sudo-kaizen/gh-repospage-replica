@@ -1,18 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 :root {
   --header-bg-color: #24292e;
   --color-text-link: #0366d6;
@@ -29,6 +14,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 main.main {
@@ -486,7 +473,7 @@ header button {
   overflow: hidden;
 }
 
-.names-wrapper .names .nick-name {
+.names-wrapper .names .username {
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
@@ -689,6 +676,7 @@ header button {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
   padding: 24px 0px;
   border-top: 1px solid #e1e4e8;
 }
@@ -733,6 +721,8 @@ header button {
 
 .repo .fork-origin {
   font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 4px;
 }
 
 .repo .fork-origin a {
@@ -745,7 +735,6 @@ header button {
 }
 
 .repo .repo-desc {
-  display: inline-block;
   padding-right: 24px;
   margin: 0px 0px 8px;
   font-size: 14px;
@@ -754,7 +743,7 @@ header button {
   word-break: break-word;
 }
 
-.repo-tags {
+.repo-topics {
   display: flex;
   flex-flow: row wrap;
   height: 30px;
@@ -764,7 +753,7 @@ header button {
   align-items: center;
 }
 
-.repo-tag {
+.repo-topic {
   margin: 0 0.125em 0.333em 0;
   display: inline-block;
   font-weight: 500;
@@ -778,12 +767,13 @@ header button {
   background-color: #f1f8ff;
 }
 
-.repo-tag:hover {
+.repo-topic:hover {
   background-color: #def;
 }
 
 .repo-meta {
   display: flex;
+  line-height: 1.5;
   flex-flow: row;
   margin-top: 8px;
   color: #586069;
@@ -802,6 +792,14 @@ header button {
 .repo-meta__forks,
 .repo-meta__stars {
   margin-right: 16px;
+}
+
+.repo-meta__language .lang-colour {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 4px;
 }
 
 .btn-star-repo {
