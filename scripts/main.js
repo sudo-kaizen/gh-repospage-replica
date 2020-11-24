@@ -216,7 +216,7 @@ function createRepositoriesHTML({ repositories: { edges: reposArr } }) {
            <li class="repo">
                 <div class="repo__details">
                   <a class="repo-name" href=${url}>${name}</a>
-  ${createFork(parent)}
+                  ${createFork(parent)}
                   ${createDescription(description)}
                   ${createRepoTopics(repoTopics)}
                   <ul class="repo-meta">
@@ -356,6 +356,7 @@ function createStarBtn(isStarred) {
 }
 
 function formatDate(updatedOnStr) {
+  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const dateDiff = (Date.now() - Date.parse(updatedOnStr)) / 1000; // in seconds
   // use seconds as standard to determine date string for markup
   const dateDiffTime = {
@@ -373,48 +374,19 @@ function formatDate(updatedOnStr) {
     return `Updated ${Math.ceil(dateDiffTime.mins)} minutes ago`;
   } else if (dateDiffTime.hours < 24) {
     //within 1 hour
-    return `Updated ${Math.ceil(dateDiffTime.hours)} hours ago`;
-  } else if (dateDiffTime.days <= 31) {
+    return `Updated ${Math.floor(dateDiffTime.hours)} hours ago`;
+  } else if (dateDiffTime.days <= 20) {
     // within 1 month
     return `Updated ${Math.floor(dateDiffTime.days)} days ago`; // within 1 year
   } else if (dateDiffTime.months < 12) {
     // within 1 year
-    return `Updated on ${new Date(updatedOnStr).getDate()} ${getMonth(
-      new Date(updatedOnStr).getMonth() + 1
-    )}`;
-  } else {
-    // > 1 year
-    return `Updated on ${new Date(updatedOnStr).getDate()} ${getMonth(
-      new Date(updatedOnStr).getMonth() + 1
-    )} ${new Date(updatedOnStr).getFullYear()}`;
-  }
-}
-
-function getMonth(index) {
-  switch (index) {
-    case 0:
-      return "Jan";
-    case 1:
-      return "Feb";
-    case 2:
-      return "Mar";
-    case 3:
-      return "Apr";
-    case 4:
-      return "May";
-    case 5:
-      return "Jun";
-    case 7:
-      return "Jul";
-    case 8:
-      return "Aug";
-    case 9:
-      return "Sep";
-    case 10:
-      return "Oct";
-    case 11:
-      return "Nov";
-    default:
-      return "Dec";
+    const dayOfMonth = new Date(updatedOnStr).getDate();
+    const monthOfYear = months[new Date(updatedOnStr).getMonth()]
+    return `Updated on ${dayOfMonth} ${monthOfYear}`;
+  } else { // > 1 year
+    const dayOfMonth = new Date(updatedOnStr).getDate();
+    const monthOfYear = months[new Date(updatedOnStr).getMonth()]
+    const year = new Date(updatedOnStr).getFullYear();
+    return `Updated on ${dayOfMonth} ${monthOfYear} ${year}`;
   }
 }
