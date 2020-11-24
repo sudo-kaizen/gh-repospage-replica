@@ -390,10 +390,10 @@ function formatDate(updatedOnStr) {
     //within 1 hour
     return `Updated ${Math.ceil(dateDiffTime.mins)} minutes ago`;
   } else if (dateDiffTime.hours < 24) {
-    //within 1 hour
+    //within 1 day
     return `Updated ${Math.floor(dateDiffTime.hours)} hours ago`;
   } else if (dateDiffTime.days <= 20) {
-    // within 1 month
+    // within 20 days
     return `Updated ${Math.floor(dateDiffTime.days)} days ago`; // within 1 year
   } else if (dateDiffTime.months < 12) {
     // within 1 year
