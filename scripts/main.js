@@ -104,7 +104,9 @@ const gqlQuery = `{
 `;
 
 const githubGqlUrl = "https://api.github.com/graphql";
-const githubToken = atob("NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw==")
+const githubToken = atob(
+  "NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw=="
+);
 fetch(githubGqlUrl, {
   method: "POST",
   headers: {
@@ -115,10 +117,12 @@ fetch(githubGqlUrl, {
   body: JSON.stringify({ query: `${gqlQuery}` }),
 })
   .then((resp) => resp.json())
-  .then(({data}) =>populateUi(data))
+  .then(({ data }) => populateUi(data))
   .catch((err) => {
     console.error(err);
-    getElem(".repo-filter-message").innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`
+    getElem(
+      ".repo-filter-message"
+    ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
   });
 
 function populateUi({ user }) {
@@ -356,7 +360,20 @@ function createStarBtn(isStarred) {
 }
 
 function formatDate(updatedOnStr) {
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
   const dateDiff = (Date.now() - Date.parse(updatedOnStr)) / 1000; // in seconds
   // use seconds as standard to determine date string for markup
   const dateDiffTime = {
@@ -381,11 +398,12 @@ function formatDate(updatedOnStr) {
   } else if (dateDiffTime.months < 12) {
     // within 1 year
     const dayOfMonth = new Date(updatedOnStr).getDate();
-    const monthOfYear = months[new Date(updatedOnStr).getMonth()]
+    const monthOfYear = months[new Date(updatedOnStr).getMonth()];
     return `Updated on ${dayOfMonth} ${monthOfYear}`;
-  } else { // > 1 year
+  } else {
+    // > 1 year
     const dayOfMonth = new Date(updatedOnStr).getDate();
-    const monthOfYear = months[new Date(updatedOnStr).getMonth()]
+    const monthOfYear = months[new Date(updatedOnStr).getMonth()];
     const year = new Date(updatedOnStr).getFullYear();
     return `Updated on ${dayOfMonth} ${monthOfYear} ${year}`;
   }
