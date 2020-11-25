@@ -593,9 +593,9 @@ cursor: pointer;
   flex-flow: row nowrap;
 }
 
-.tabs__link:first-child {
+/*.tabs__link:first-child {
   margin-left: 16px;
-}
+}*/
 
 .tabs__link {
   display: inline-block;
@@ -975,7 +975,7 @@ cursor: pointer;
 
   .tabs {
     justify-content: flex-end;
-    padding: 0px 16px;
+    padding: 0px 16px 0px 8px;
     overflow: hidden;
   }
 
@@ -1037,6 +1037,11 @@ cursor: pointer;
     max-height: 62px;
   }
 
+  .tabs {
+    padding: 0px 16px;
+  }
+
+
   .tabs-wrapper.hide-md {
     margin-top: 24px;
     display: flex;
@@ -1047,6 +1052,10 @@ cursor: pointer;
   .tabs-spacer .temp-profile {
     padding: 0px 24px;
   }
+
+.tabs__link:first-child {
+  margin-left: 16px;
+}
 
   .search-repos-wrapper, .repo-filter-message {
     padding: 16px 16px 16px 24px;

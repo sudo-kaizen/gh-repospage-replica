@@ -1,0 +1,537 @@
+{
+  "data": {
+    "user": {
+      "avatarUrl": "https://avatars2.githubusercontent.com/u/37955249?u=e4bf6dc5c2f85db4ba072acb5e4297bd843b4bcf&v=4",
+      "bio": "Not PRO 🤓",
+      "login": "sudo-kaizen",
+      "name": "Orim Dominic Adah",
+      "repositories": {
+        "totalCount": 36,
+        "edges": [
+          {
+            "node": {
+              "description": "A clone of a Github profile page - repositories tab",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "gh-repospage-replica",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-11-23T16:34:24Z",
+              "url": "https://github.com/sudo-kaizen/gh-repospage-replica",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "An android notepad app. A result of tasks completed from the DSCUnilag #DSC20daysOfCode program. Download it here: ",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "notepad",
+              "primaryLanguage": {
+                "color": "#b07219",
+                "name": "Java"
+              },
+              "stargazerCount": 2,
+              "pushedAt": "2019-01-07T05:48:01Z",
+              "url": "https://github.com/sudo-kaizen/notepad",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": [
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "notepad"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "android"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "google-dsc"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "hackathon"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A CLI tool to calculate the mean, the median, and the mode of a set of numbers from a file",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "go-mmm",
+              "primaryLanguage": {
+                "color": "#00ADD8",
+                "name": "Go"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-09-27T16:47:59Z",
+              "url": "https://github.com/sudo-kaizen/go-mmm",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A pure React form with some real-life validation and input-masking scenarios. Code is reusable across Angular and others",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "soft-form",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-11-23T14:39:36Z",
+              "url": "https://github.com/sudo-kaizen/soft-form",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": [
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "react"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "form-validation"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A clone of the PiggyVest register page without any design library at https://piggyregdashclone.netlify.app/",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "orimdominic.piggyvestsignup.io",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 1,
+              "pushedAt": "2020-11-14T04:26:34Z",
+              "url": "https://github.com/sudo-kaizen/orimdominic.piggyvestsignup.io",
+              "viewerHasStarred": true,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": [
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "piggyvest"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "clone"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "frontend"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "⚡️ This repo serves as a resource for developers to leverage on their Journey into Front End Development. ",
+              "forkCount": 110,
+              "isFork": false,
+              "name": "Learning-Resource-Path-Front-End",
+              "primaryLanguage": null,
+              "stargazerCount": 238,
+              "pushedAt": "2020-11-06T07:29:57Z",
+              "url": "https://github.com/devcenter-square/Learning-Resource-Path-Front-End",
+              "viewerHasStarred": true,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": [
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "css"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "html"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "w3schools"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "journey"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "javascript"
+                      }
+                    }
+                  },
+                  {
+                    "node": {
+                      "topic": {
+                        "name": "codecademy"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": false,
+              "name": "tailwind-explore",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-11-06T09:47:16Z",
+              "url": "https://github.com/sudo-kaizen/tailwind-explore",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "Source code for the \"Designing with Tailwind CSS\" course.",
+              "forkCount": 0,
+              "isFork": true,
+              "name": "designing-with-tailwindcss",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-03-02T16:58:40Z",
+              "url": "https://github.com/sudo-kaizen/designing-with-tailwindcss",
+              "viewerHasStarred": false,
+              "parent": {
+                "url": "https://github.com/tailwindlabs/designing-with-tailwindcss",
+                "nameWithOwner": "tailwindlabs/designing-with-tailwindcss"
+              },
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "An online memorial for the heroes of the #EndSARS protests in Nigeria",
+              "forkCount": 2,
+              "isFork": false,
+              "name": "endsars-memorial",
+              "primaryLanguage": {
+                "color": "#e34c26",
+                "name": "HTML"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-10-25T08:15:46Z",
+              "url": "https://github.com/sudo-kaizen/endsars-memorial",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A simple Go app that monitors the uptime/downtime of a server ",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "go-server-monitor",
+              "primaryLanguage": {
+                "color": "#00ADD8",
+                "name": "Go"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-09-30T11:16:23Z",
+              "url": "https://github.com/sudo-kaizen/go-server-monitor",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": true,
+              "name": "node-express-image-processing-server",
+              "primaryLanguage": {
+                "color": "#f1e05a",
+                "name": "JavaScript"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-01-08T13:58:43Z",
+              "url": "https://github.com/sudo-kaizen/node-express-image-processing-server",
+              "viewerHasStarred": false,
+              "parent": {
+                "url": "https://github.com/pluralsight-projects/node-express-image-processing-server",
+                "nameWithOwner": "pluralsight-projects/node-express-image-processing-server"
+              },
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": false,
+              "name": "frag-catalog",
+              "primaryLanguage": {
+                "color": "#b07219",
+                "name": "Java"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-09-12T07:03:52Z",
+              "url": "https://github.com/sudo-kaizen/frag-catalog",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "An android game implementing anagrams learnt from Google Applied CS Skills.",
+              "forkCount": 0,
+              "isFork": false,
+              "name": "anagrams",
+              "primaryLanguage": {
+                "color": "#b07219",
+                "name": "Java"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2018-11-29T09:54:48Z",
+              "url": "https://github.com/sudo-kaizen/anagrams",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": false,
+              "name": "fe-implementations",
+              "primaryLanguage": {
+                "color": "#e34c26",
+                "name": "HTML"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-09-01T21:18:11Z",
+              "url": "https://github.com/sudo-kaizen/fe-implementations",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": true,
+              "name": "e-CareFe",
+              "primaryLanguage": null,
+              "stargazerCount": 0,
+              "pushedAt": "2020-08-24T16:32:47Z",
+              "url": "https://github.com/sudo-kaizen/e-CareFe",
+              "viewerHasStarred": false,
+              "parent": {
+                "url": "https://github.com/BuildForSDGCohort2/e-CareFe",
+                "nameWithOwner": "BuildForSDGCohort2/e-CareFe"
+              },
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A simple NPM package to get capitals, currency, native language etc. of all the countries in the world",
+              "forkCount": 0,
+              "isFork": true,
+              "name": "world-countries-capitals",
+              "primaryLanguage": {
+                "color": "#f1e05a",
+                "name": "JavaScript"
+              },
+              "stargazerCount": 1,
+              "pushedAt": "2020-06-12T08:20:36Z",
+              "url": "https://github.com/sudo-kaizen/world-countries-capitals",
+              "viewerHasStarred": false,
+              "parent": {
+                "url": "https://github.com/bhatvikrant/world-countries-capitals",
+                "nameWithOwner": "bhatvikrant/world-countries-capitals"
+              },
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": false,
+              "name": "mailbag-client",
+              "primaryLanguage": {
+                "color": "#2b7489",
+                "name": "TypeScript"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-08-11T03:00:43Z",
+              "url": "https://github.com/sudo-kaizen/mailbag-client",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 0,
+              "isFork": true,
+              "name": "SuperNigerians",
+              "primaryLanguage": {
+                "color": "#563d7c",
+                "name": "CSS"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-07-31T21:13:45Z",
+              "url": "https://github.com/sudo-kaizen/SuperNigerians",
+              "viewerHasStarred": false,
+              "parent": {
+                "url": "https://github.com/hngi/SuperNigerians",
+                "nameWithOwner": "hngi/SuperNigerians"
+              },
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": "A couple of projects in which I eat up APIs for frontend dev chops",
+              "forkCount": 1,
+              "isFork": false,
+              "name": "api-consumer",
+              "primaryLanguage": {
+                "color": "#f1e05a",
+                "name": "JavaScript"
+              },
+              "stargazerCount": 0,
+              "pushedAt": "2020-06-25T16:18:44Z",
+              "url": "https://github.com/sudo-kaizen/api-consumer",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          },
+          {
+            "node": {
+              "description": null,
+              "forkCount": 9,
+              "isFork": false,
+              "name": "PiggyVest-HNG",
+              "primaryLanguage": {
+                "color": "#e34c26",
+                "name": "HTML"
+              },
+              "stargazerCount": 1,
+              "pushedAt": "2020-06-19T17:32:12Z",
+              "url": "https://github.com/Sproff/PiggyVest-HNG",
+              "viewerHasStarred": false,
+              "parent": null,
+              "repositoryTopics": {
+                "edges": []
+              }
+            }
+          }
+        ]
+      },
+      "status": {
+        "emojiHTML": "<div><img class=\"emoji\" title=\":octocat:\" alt=\":octocat:\" src=\"https://github.githubassets.com/images/icons/emoji/octocat.png\" height=\"20\" width=\"20\" align=\"absmiddle\"></div>",
+        "message": "Building self and building stuff"
+      }
+    }
+  }
+}
