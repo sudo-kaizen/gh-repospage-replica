@@ -58,6 +58,28 @@ document.addEventListener("scroll", (ev) => {
   }
 });
 
+// events to occur on focusing on the top-left search input
+getElem(".header-search-links__search .search-input")
+.addEventListener("focus", ev => {
+  // Could have done this better using JS and CSS classes but I'm just tired
+  // focus the label for border-shadow styling
+  getElem(".header-search-links__search .input-wrapper").classList.add("focused");
+  hide(getElem(".f-slash"))
+  // expand the input's width
+  getElem(".header-search-links__search").style.maxWidth = "100%"
+})
+
+// events to occur on focusing on the top-left search input
+getElem(".header-search-links__search .search-input")
+.addEventListener("blur", ev => {
+  // Could have done this better using JS and CSS classes but I'm just tired
+  // focus the label for border-shadow styling
+  getElem(".header-search-links__search .input-wrapper").classList.remove("focused");
+  show(getElem(".f-slash"))
+  // expand the input's width
+  getElem(".header-search-links__search").style.maxWidth = "272px"
+})
+
 const gqlQuery = `{
         user(login: "sudo-kaizen"){
           avatarUrl
@@ -107,27 +129,27 @@ const githubGqlUrl = "https://api.github.com/graphql";
 const githubToken = atob(
   "NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw=="
 );
-fetch(githubGqlUrl, {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `bearer ${githubToken}
-    `,
-  },
-  body: JSON.stringify({ query: `${gqlQuery}` }),
-})
-  .then((resp) => resp.json())
-  .then(({ data }) => populateUi(data))
-  .catch((err) => {
-    console.error(err);
-    getElem(
-      ".repo-filter-message"
-    ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
-  });
+// fetch(githubGqlUrl, {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//     Authorization: `bearer ${githubToken}
+//     `,
+//   },
+//   body: JSON.stringify({ query: `${gqlQuery}` }),
+// })
+//   .then((resp) => resp.json())
+//   .then(({ data }) => populateUi(data))
+//   .catch((err) => {
+//     console.error(err);
+//     getElem(
+//       ".repo-filter-message"
+//     ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
+//   });
 
-// fetch("http://localhost:3000/data")
-// .then(res => res.json())
-// .then(populateUi)
+fetch("http://localhost:3000/data")
+.then(res => res.json())
+.then(populateUi)
 
 function populateUi({ user }) {
   // console.log(JSON.stringify(user, "", 2));
