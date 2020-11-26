@@ -107,27 +107,27 @@ const githubGqlUrl = "https://api.github.com/graphql";
 const githubToken = atob(
   "NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw=="
 );
-// fetch(githubGqlUrl, {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Authorization: `bearer ${githubToken}
-//     `,
-//   },
-//   body: JSON.stringify({ query: `${gqlQuery}` }),
-// })
-//   .then((resp) => resp.json())
-//   .then(({ data }) => populateUi(data))
-//   .catch((err) => {
-//     console.error(err);
-//     getElem(
-//       ".repo-filter-message"
-//     ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
-//   });
+fetch(githubGqlUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `bearer ${githubToken}
+    `,
+  },
+  body: JSON.stringify({ query: `${gqlQuery}` }),
+})
+  .then((resp) => resp.json())
+  .then(({ data }) => populateUi(data))
+  .catch((err) => {
+    console.error(err);
+    getElem(
+      ".repo-filter-message"
+    ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
+  });
 
-fetch("http://localhost:3000/data")
-.then(res => res.json())
-.then(populateUi)
+// fetch("http://localhost:3000/data")
+// .then(res => res.json())
+// .then(populateUi)
 
 function populateUi({ user }) {
   // console.log(JSON.stringify(user, "", 2));
@@ -137,6 +137,7 @@ function populateUi({ user }) {
   setBio(user);
   setStatus(user);
   setRepoCount(user);
+  setFilterMessage(user)
   createRepositoriesHTML(user);
 }
 
@@ -197,8 +198,17 @@ function setStatus({ status: { emojiHTML = null, message = "" } }) {
 }
 
 function setRepoCount({ repositories: { totalCount } }) {
-  getElem(".repo-counter").innerHTML = totalCount;
-  getElem(
+  const repoCountElems = [
+    getElem(".tabs-wrapper.hide-md .repo-counter"),
+    getElem(".tabs-wrapper.d-md-none .repo-counter"),
+  ];
+  repoCountElems.forEach((el) => {
+    el.innerHTML =`${totalCount}`;
+  });
+ }
+
+function setFilterMessage({repositories: {totalCount}}) {
+ getElem(
     ".repo-filter-message"
   ).innerHTML = `<strong>${totalCount}</strong> results for <strong>public</strong> repositories`;
 }
