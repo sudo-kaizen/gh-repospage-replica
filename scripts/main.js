@@ -129,27 +129,23 @@ const githubGqlUrl = "https://api.github.com/graphql";
 const githubToken = atob(
   "NDcxYmY2ZGQ3MmZjNDQ3MGQ2MjdjNTUyMmVlMTc0YzgyMGVkYmQ5Nw=="
 );
-// fetch(githubGqlUrl, {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json",
-//     Authorization: `bearer ${githubToken}
-//     `,
-//   },
-//   body: JSON.stringify({ query: `${gqlQuery}` }),
-// })
-//   .then((resp) => resp.json())
-//   .then(({ data }) => populateUi(data))
-//   .catch((err) => {
-//     console.error(err);
-//     getElem(
-//       ".repo-filter-message"
-//     ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
-//   });
-
-fetch("http://localhost:3000/data")
-.then(res => res.json())
-.then(populateUi)
+fetch(githubGqlUrl, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `bearer ${githubToken}
+    `,
+  },
+  body: JSON.stringify({ query: `${gqlQuery}` }),
+})
+  .then((resp) => resp.json())
+  .then(({ data }) => populateUi(data))
+  .catch((err) => {
+    console.error(err);
+    getElem(
+      ".repo-filter-message"
+    ).innerHTML = `<strong style="color:#c95151;">An error occured. Please check your <code>Github Access Token</code></strong>`;
+  });
 
 function populateUi({ user }) {
   // console.log(JSON.stringify(user, "", 2));
