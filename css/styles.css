@@ -10,12 +10,17 @@
 }
 
 html,
-body {
+body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;
+}
+
+button{
+  font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 main.main {
@@ -59,24 +64,44 @@ header button {
 .svg-sign-out {
   fill: #fff;
 }
+
 .header-svg-icon:hover,
 .svg-sign-out:hover {
   fill: hsla(0, 0%, 100%, 0.7);
   border-color: hsla(0, 0%, 100%, 0.7);
 }
 
-.header-r-icons,
+.header-profile-icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  outline: none;
+  align-self: stretch;
+}
+.header-profile-icon {
+
+}
+
+.header-profile-icon__img {
+  border-radius: 50%;
+}
+
+/*.header-r-icons,
 .header-profile-icon {
   display: flex;
   align-items: center;
 }
-
+*/
 .notification-bubble-wrapper {
   position: relative;
   font-size: 14px;
   cursor: pointer;
   outline: none;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
 }
+
 .notification-bubble {
   width: 14px;
   height: 14px;
@@ -85,7 +110,7 @@ header button {
   display: inline-block;
   position: absolute;
   border: 2px solid #24292e;
-  top: -6px;
+  top: 0px;
   left: 6px;
   z-index: 2;
 }
@@ -120,6 +145,7 @@ header button {
   cursor: pointer;
   outline: none;
   color: #fff;
+  align-self: stretch;
 }
 
 .new-items-svg-wrapper:hover *,
@@ -254,14 +280,7 @@ cursor: pointer;
   max-width: 18px;
   margin-right: 8px;
 }
-.header-profile-icon {
-  color: #fff;
-  outline: none;
-}
 
-.header-profile-icon__img {
-  border-radius: 50%;
-}
 
 .dropdown-header {
   background-color: var(--header-bg-color);
@@ -288,6 +307,8 @@ cursor: pointer;
   outline: none;
   margin-top: 1px;
   font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 .dropdown-header__search-form .header-search-input:focus {
@@ -296,11 +317,28 @@ cursor: pointer;
 }
 
 .dropdown-header__search-form .header-search-input::placeholder,
-.header-search-links__search .search-input::placeholder {
+.header-search-links__search .search-input::placeholder
+ {
   color: hsla(0, 0%, 100%, 0.75);
   font-size: 14px;
   font-weight: 400;
-  display: block;
+  word-wrap: normal;
+display: inline-block;
+resize: none;
+overflow: hidden;
+pointer-events: none;
+  opacity: 1;
+  white-space: pre!important;
+border: 0;
+padding: 0px;
+margin: 0px;
+text-decoration: inherit;
+  font-family:-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.dropdown-header__search-form .header-search-input:focus + img{
+  display: hidden;
 }
 
 .header-link-wrapper {
@@ -363,6 +401,12 @@ cursor: pointer;
   font-size: inherit;
   font-weight: 400;
   color: #fff;
+  position: relative;
+  box-shadow: none;
+  padding: 0px;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
   vertical-align: middle;
   background-color: #24292e;
   border: 1px solid #444d56;
@@ -371,30 +415,44 @@ cursor: pointer;
   justify-content: space-between;
   border-radius: 6px;
   outline: none;
-  cursor: text;
+  cursor: default;
 }
 
-.header-search-links__search .input-wrapper:focus {
+.header-search-links__search .input-wrapper.focused{
+  border: 1px solid #0366d6;
+  background-color: #fff;
+}
+
+.header-search-links__search .input-wrapper:focus, .header-search-links__search form:focus {
   background-color: #444d56;
   border: 1px solid #0366d6;
   border-color: #0366d6;
 }
 
 .header-search-links__search .search-input {
-  z-index: 2;
-  position: relative;
+overflow: visible;
   min-height: 28px;
   display: table-cell;
+  width: 100%;
+  margin: 0px;
   color: #fff;
   border-radius: 6px;
   font-size: 14px;
-  background: transparent;
-  border: 1px solid transparent;
+  background: none;
+  border: 0px;
+  vertical-align: middle;
   outline: none;
   box-shadow: none;
   line-height: 20px;
-  vertical-align: middle;
-  padding: 3px 12px;
+  align-self: center;
+  padding: 0px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.header-search-links__search .search-input:focus{
+  background-color: #fff;
+  color: black;
 }
 
 .header-search-links__search .search-input + .f-slash {
@@ -402,13 +460,7 @@ cursor: pointer;
 }
 
 .header-search-links__links {
-  flex: auto;
-  align-self: stretch;
-  align-items: center;
-  flex-wrap: nowrap;
   display: flex;
-  margin-right: 16px;
-  width: 100%;
 }
 
 .header-search-links__links .link {
@@ -523,7 +575,7 @@ cursor: pointer;
 }
 
 .profile .status-bio {
-  font-size: 1rem;
+  font-size: 16px;
   vertical-align: middle;
   color: #24292e;
 }
@@ -591,9 +643,6 @@ cursor: pointer;
 .tabs {
   display: flex;
   flex-flow: row nowrap;
-}
-
-.tabs__link:first-child {
   margin-left: 16px;
 }
 
@@ -674,6 +723,8 @@ cursor: pointer;
   border-radius: 6px;
   outline: none;
   box-shadow: inset 0 1px 0 rgba(225, 228, 232, 0.2);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 .search-repos-wrapper input:focus {
@@ -685,6 +736,7 @@ cursor: pointer;
 .repo-filter-message{
   padding: 16px;
   color: #24292e;
+  margin-bottom: 4px;
 }
 
 .repos__list {
@@ -702,7 +754,7 @@ cursor: pointer;
 }
 
 .repo .repo__details{
-  flex-basis: 75%;
+  flex-basis: 85%;
 }
 
 .repo svg {
@@ -760,10 +812,10 @@ cursor: pointer;
 
 .repo .repo-desc {
   padding-right: 24px;
-  margin: 0px 0px 8px;
+  margin: 0px 0px 16px;
   font-size: 14px;
   line-height: 1.5;
-  width: 78%;
+  width: 75%;
   word-break: break-word;
 }
 
@@ -809,7 +861,7 @@ cursor: pointer;
 .repo-meta .meta {
   display: flex;
   flex-flow: row;
-  align-items: center;
+  align-items: baseline;
 }
 
 .repo-meta__language,
@@ -886,6 +938,7 @@ cursor: pointer;
   transition: opacity 0.2s ease;
 }
 
+
 /* [.hide-{size} is hide from {size} and below*/
 @media screen and (max-width: 543px) {
   .hide-sm {
@@ -911,6 +964,8 @@ cursor: pointer;
 
   .github-icon-btn {
     margin-right: 16px;
+    display: flex;
+    align-items: center;
   }
 
   .header-search-links {
@@ -975,8 +1030,9 @@ cursor: pointer;
 
   .tabs {
     justify-content: flex-end;
-    padding: 0px 16px;
+    padding: 0px 16px 0px 8px;
     overflow: hidden;
+    margin-left: 0px;
   }
 
   .main .profile,
@@ -1037,6 +1093,11 @@ cursor: pointer;
     max-height: 62px;
   }
 
+  .tabs {
+    padding: 0px 16px;
+  }
+
+
   .tabs-wrapper.hide-md {
     margin-top: 24px;
     display: flex;
@@ -1047,6 +1108,10 @@ cursor: pointer;
   .tabs-spacer .temp-profile {
     padding: 0px 24px;
   }
+
+.tabs__link:first-child {
+  margin-left: 16px;
+}
 
   .search-repos-wrapper, .repo-filter-message {
     padding: 16px 16px 16px 24px;
