@@ -633,7 +633,7 @@ overflow: visible;
   background-color: #fff;
   overflow-x: auto;
   overflow-y: hidden;
-  border-bottom: 1px solid #d1d5da;
+  border-bottom: 1px solid #e1e4e8;
   box-shadow: none;
   position: sticky;
   top: 0;
@@ -1151,4 +1151,8 @@ overflow: visible;
     margin-left: auto;
     margin-right: auto;
   }
+
+.tabs-spacer .temp-profile {
+    padding: 0px 24px 0px 16px;
+}
 }

@@ -66,7 +66,7 @@ getElem(".header-search-links__search .search-input")
   getElem(".header-search-links__search .input-wrapper").classList.add("focused");
   hide(getElem(".f-slash"))
   // expand the input's width
-  getElem(".header-search-links__search").style.maxWidth = "100%"
+  getElem(".header-search-links__search").style.maxWidth = "49%"
 })
 
 // events to occur on focusing on the top-left search input
